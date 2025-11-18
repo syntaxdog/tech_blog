@@ -3,11 +3,16 @@
 name: Tistory Auto Sync and Commit
 
 on:
-  # 1. 스케줄 설정: UTC 기준으로 매일 자정에 실행 (한국 시간 기준 오전 9시)
   schedule:
     - cron: '0 0 * * *'
-  # 2. 수동 실행 옵션: GitHub 웹사이트에서 'Run workflow' 버튼을 눌러 즉시 실행할 수 있게 함
   workflow_dispatch:
+
+permissions:
+  contents: write
+
+# 🚨 여기에 env 블록을 추가하세요.
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 이 토큰이 git push 인증에 사용됩니다.
 
 jobs:
   sync:
