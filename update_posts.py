@@ -64,7 +64,7 @@ def check_and_update_posts(posts_data):
         # else:
         # print(f"➖ 변경 없음: {post['title']}")
 
-    return
+    return changes_detected
 
 
 def commit_and_push(changes_detected):
