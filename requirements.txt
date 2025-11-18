@@ -1,0 +1,3 @@
+requests            # 티스토리 API를 사용하거나 특정 글의 HTML을 가져올 때 사용
+beautifulsoup4      # HTML 내용을 파싱(분석)할 때 사용
+html2text           # HTML을 Markdown으로 변환하는 데 사용
